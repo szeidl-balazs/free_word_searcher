@@ -1,7 +1,38 @@
-import React, { Component } from "react";
+import React, { /*Component,*/ useEffect } from "react";
 import styled from "styled-components";
 
-class Searchbar extends Component {
+  const Input = styled.input`
+  margin: 10px auto;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 4, 147, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: yellow;
+  `;
+
+
+  function Searchbar({search, setSearch}) {
+
+    useEffect(() => {    
+      setSearch(search);
+    }, [search, setSearch]);
+
+    const onChangeHandler = (event) => {
+      setSearch(event.target.value);
+    };
+
+    return (
+      <div>
+        <Input onChange={onChangeHandler} autoFocus />
+      </div>
+    );
+
+  }  
+  
+
+/*class Searchbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,6 +67,6 @@ class Searchbar extends Component {
       </div>
     );
   }
-}
+}*/
 
 export default Searchbar;

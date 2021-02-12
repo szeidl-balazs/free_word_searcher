@@ -1,9 +1,29 @@
-import React, { Component } from "react";
+import React, { /*Component,*/ useState, useEffect } from "react";
 import "./App.css";
 import CardList from "./ColorCard/ListOfCards.js";
 import Searchbar from "./Searchbar/Searchbar.js";
 
-class App extends Component {
+const App = () => {
+
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    document.addEventListener('click', welcome);
+  });
+
+  const welcome = () => {
+    alert("Hello!");
+  };  
+
+  return (
+    <div>
+      <Searchbar search={search} setSearch={setSearch} />
+      <CardList search={search} />
+    </div>
+  );
+}
+
+/*class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,6 +52,6 @@ class App extends Component {
       </div>
     );
   }
-}
+}*/
 
 export default App;
