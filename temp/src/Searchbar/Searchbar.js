@@ -1,7 +1,6 @@
 import React, { /*Component,*/ useEffect } from "react";
 import styled from "styled-components";
 
-//Az input tag a komponens a style componentsben (egy object) van tag formájában előkészítve, onnét van behivatkozva ide
   const Input = styled.input`
   margin: 10px auto;
   background: linear-gradient(
@@ -20,15 +19,13 @@ import styled from "styled-components";
       setSearch(search);
     }, [search, setSearch]);
 
-    //esemény figyelő a input mező értékeinek a figyelésére
     const onChangeHandler = (event) => {
       setSearch(event.target.value);
     };
-    
-    //input mező szabadszavas kereséshez, a komponens a style componentsben (egy object) van tag formájában előkészítve, onnét van behivatkozva ide
+
     return (
       <div>
-        <Input onChange={onChangeHandler} autoFocus /> 
+        <Input onChange={onChangeHandler} autoFocus />
       </div>
     );
 

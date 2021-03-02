@@ -7,7 +7,6 @@ const App = () => {
 
   const [search, setSearch] = useState("");
 
-  //welcome üzenetet jeleníti meg felugró ablakban az oldal betöltésekor
   useEffect(() => {
     document.addEventListener('click', welcome);
   });
