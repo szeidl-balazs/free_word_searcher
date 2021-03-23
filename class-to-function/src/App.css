@@ -5,3 +5,7 @@
   grid-template-columns: repeat(5, auto);
   grid-gap: 20px;
 }
+
+h3 {
+  color: rgb(217, 248, 168);
+}
