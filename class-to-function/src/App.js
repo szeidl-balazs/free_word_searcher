@@ -7,17 +7,18 @@ const App = () => {
 
   const [search, setSearch] = useState("");
 
-  //welcome üzenetet jeleníti meg felugró ablakban az oldal betöltésekor
+  /*welcome üzenetet jeleníti meg felugró ablakban az oldal betöltésekor
   useEffect(() => {
     document.addEventListener('click', welcome);
   });
 
   const welcome = () => {
     alert("Hello!");
-  };  
+  };  */
 
   return (
     <div>
+      <h3>Start typing the searched color in English!</h3>
       <Searchbar search={search} setSearch={setSearch} />
       <CardList search={search} />
     </div>
